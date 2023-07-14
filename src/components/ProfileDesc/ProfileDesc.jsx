@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { MdAlternateEmail, MdLocationPin } from 'react-icons/md';
 import css from "./ProfileDesc.module.css"
 
@@ -14,4 +15,11 @@ export const ProfileDesc = ({ avatar, username, tag, location }) => {
             <p className={css.location}><MdLocationPin />{location}</p>
         </div>
     )
+}
+
+ProfileDesc.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
 }
