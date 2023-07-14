@@ -3,11 +3,11 @@ import css from "./Statistics.module.css"
 import { MdPercent } from 'react-icons/md';
 
 
-export const Statistics = (data) => {
-    const stats = data.stats;
+export const Statistics = ({ title, stats }) => {
+   
     return (
         <section className={ css.statistics}>
-            {data.title && (<h2 className={css.title}>{data.title}</h2>)}
+            {title && (<h2 className={css.title}>{title}</h2>)}
 
             <ul className={ css.statList}>
                 {stats.map(stat => {
